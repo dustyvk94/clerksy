@@ -1,0 +1,9 @@
+a {
+  display: inline-block;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
