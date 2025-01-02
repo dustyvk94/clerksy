@@ -1,0 +1,11 @@
+.heading {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.12;
+
+  &--medium {
+    font-size: 28px;
+  }
+}

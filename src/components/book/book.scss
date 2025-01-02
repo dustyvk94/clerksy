@@ -1,0 +1,33 @@
+.book {
+  padding-block: 120px;
+
+  &__grid {
+    display: grid;
+    column-gap: 40px;
+    justify-content: space-between;
+    grid-template-columns: 394px 490px;
+  }
+
+  &__row--content {
+    align-self: center;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 488px;
+    background-image: url("../images/decor/vector.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

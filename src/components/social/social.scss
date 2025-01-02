@@ -1,0 +1,13 @@
+.social {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+    fill: #198c36;
+  }
+}

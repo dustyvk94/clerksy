@@ -1,0 +1,37 @@
+.subscription {
+  background-color: #f2efe6;
+  padding-block: 54px 72px;
+
+  &__container {
+    display: flex;
+    column-gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 350px;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__form {
+    max-width: 590px;
+  }
+
+  &__form-text {
+    margin: 12px 0 0;
+    font-size: 14px;
+  }
+
+  &__form-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #198c36;
+  }
+}

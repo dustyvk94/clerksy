@@ -1,0 +1,24 @@
+.started {
+  color: #fbfaf7;
+  background-image: url("../images/decor/started/frame-left.svg"),
+    url("../images/decor/started/frame-right.svg");
+  background-position: left bottom, right bottom;
+  background-size: 300px 400px;
+  background-repeat: no-repeat;
+  background-color: #163a24;
+  padding-block: 120px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__description {
+    margin-bottom: 18px;
+  }
+}

@@ -1,0 +1,19 @@
+.header {
+  color: #fff;
+  background-color: #163a24;
+  padding-block: 20px;
+
+  &__container,
+  &__user-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    justify-content: space-between;
+  }
+
+  &__user-actions {
+    column-gap: 24px;
+  }
+}

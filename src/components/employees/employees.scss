@@ -1,0 +1,19 @@
+.employees {
+  background-color: #f2efe6;
+  padding-block: 120px;
+
+  &__head {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

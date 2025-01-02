@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  border-radius: 160px;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: transparent;
+
+  &--primary {
+    color: #fbfaf7;
+    background-color: #198c36;
+  }
+
+  &--secondary {
+    color: #163a24;
+    background-color: #fab5a0;
+  }
+
+  &--link {
+    border-radius: 0;
+    padding: 0;
+    color: #fbfaf7;
+  }
+}

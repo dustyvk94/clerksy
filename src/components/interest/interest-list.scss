@@ -1,0 +1,42 @@
+.interest-list {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    position: relative;
+    align-self: start;
+    border-radius: 15px;
+    padding: 145px 40px 66px;
+    box-shadow: 5px 5px 20px 0 #e9e4d5;
+    background-color: #fbfaf7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 40px;
+      top: 50px;
+      width: 84px;
+      height: 75px;
+      background-position: left center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--protect::before {
+      background-image: url("../images/icons/protect.svg");
+    }
+
+    &--employees::before {
+      background-image: url("../images/icons/star.svg");
+    }
+
+    &--know::before {
+      background-image: url("../images/icons/search.svg");
+    }
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}

@@ -1,0 +1,27 @@
+.hero {
+  color: #fbfaf7;
+  background-image: url("../images/decor/hero_decor-bg.svg");
+  background-position: right center;
+  background-size: 738px auto;
+  background-repeat: no-repeat;
+  background-color: #163a24;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: 580px;
+  }
+
+  &__content {
+    max-width: 476px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    line-height: 1.36;
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

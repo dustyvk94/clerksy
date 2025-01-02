@@ -1,0 +1,52 @@
+.steps-list {
+  display: grid;
+  column-gap: 130px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 262px);
+  list-style: none;
+
+  &__item {
+    position: relative;
+    text-align: center;
+
+    &:nth-child(3)::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: -40px;
+      display: block;
+      width: 290px;
+      height: 183px;
+      background-image: url("../images/icons/stroke_icon.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: 50%;
+      display: block;
+      width: 75px;
+      height: 36px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(1)::after {
+      background-image: url("../images/icons/arrow-right.svg");
+    }
+
+    &:nth-child(2)::after {
+      background-image: url("../images/icons/arrow-right_revert.svg");
+    }
+  }
+
+  &__text {
+    margin-bottom: 13px;
+  }
+}

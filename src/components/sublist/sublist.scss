@@ -1,0 +1,25 @@
+.sublist {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  &__item {
+    display: flex;
+    column-gap: 11px;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #163a24;
+  }
+
+  &__item p {
+    margin-bottom: 0;
+  }
+}

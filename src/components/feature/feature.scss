@@ -1,0 +1,25 @@
+.feature {
+  padding-block: 120px 20px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__content {
+    max-width: 394px;
+  }
+
+  &__subtitle {
+    margin-bottom: 27px;
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}
