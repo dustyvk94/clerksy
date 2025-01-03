@@ -1,27 +1,52 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .subscription {
-  background-color: #f2efe6;
+  background-color: var(--tc-light);
   padding-block: 54px 72px;
+
+  @include tablet-big {
+    padding-block: 40px;
+  }
 
   &__container {
     display: flex;
-    column-gap: 40px;
     justify-content: space-between;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__content {
-    max-width: 350px;
+    flex: 1 0 350px;
+
+    @include tablet {
+      flex: auto;
+      text-align: center;
+    }
   }
 
   &__title {
     margin-bottom: 26px;
+
+    @include tablet-big {
+      margin-bottom: 12px;
+    }
   }
 
   &__description {
-    margin: 0;
+    margin-bottom: 0;
   }
 
   &__form {
-    max-width: 590px;
+    flex: 0 1 590px;
+
+    @include tablet {
+      flex: auto;
+      max-width: 500px;
+    }
   }
 
   &__form-text {

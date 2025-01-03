@@ -1,3 +1,5 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .footer {
   &__row {
     display: flex;
@@ -6,28 +8,60 @@
 
     &--top {
       padding-block: 40px;
+
+      @include tablet-big {
+        padding-block: 20px;
+      }
     }
 
     &--bottom {
-      border-top: 1px solid #f2efe6;
+      border-top: 1px solid var(--tc-light);
       padding-block: 25px 26px;
+
+      @include tablet-big {
+        flex-direction: column-reverse;
+        gap: 10px;
+      }
     }
   }
 
+  &__logo,
+  &__social {
+    flex-basis: 20%;
+  }
+
   &__caption {
+    flex-basis: 60%;
     margin: 0;
     font-family: var(--font-secondary);
     font-weight: 600;
     font-size: 24px;
+    text-align: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: end;
   }
 
   &__copy {
+    margin-bottom: 0;
     font-size: 14px;
+
+    @include tablet-big {
+      text-align: center;
+    }
   }
 
   &__links-list {
     display: flex;
-    column-gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
   }
 
   &__links-link {

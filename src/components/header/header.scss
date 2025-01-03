@@ -1,6 +1,8 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .header {
-  color: #fff;
-  background-color: #163a24;
+  color: var(--tc-light);
+  background-color: var(--bgc-secondary);
   padding-block: 20px;
 
   &__container,
@@ -11,9 +13,18 @@
 
   &__container {
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__user-actions {
     column-gap: 24px;
+
+    @include mobile {
+      justify-content: space-evenly;
+    }
   }
 }

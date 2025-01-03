@@ -1,3 +1,5 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .heading {
   margin: 0;
   font-family: var(--font-secondary);
@@ -5,7 +7,15 @@
   font-size: 48px;
   line-height: 1.12;
 
+  @include tablet {
+    font-size: 38px;
+  }
+
   &--medium {
     font-size: 28px;
+
+    @include tablet-big {
+      font-size: 22px;
+    }
   }
 }

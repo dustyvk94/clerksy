@@ -1,19 +1,34 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .scenes {
   padding-block: 60px;
+
+  @include mobile {
+    padding-block: 40px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     min-height: 424px;
-    max-width: 984px;
     background-image: url("../images/decor/scenes_decor-bg.svg");
     background-position: right 15px center;
     background-size: 492px auto;
     background-repeat: no-repeat;
+
+    @include tablet {
+      min-height: auto;
+      background-image: none;
+    }
   }
 
   &__content {
     max-width: 394px;
+
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__title {

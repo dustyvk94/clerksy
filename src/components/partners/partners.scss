@@ -1,8 +1,18 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .partners {
   padding-block: 80px 120px;
+
+  @include mobile {
+    padding-block: 30px 60px;
+  }
 
   &__title {
     margin-bottom: 66px;
     text-align: center;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 }

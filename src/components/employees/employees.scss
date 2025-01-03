@@ -1,6 +1,12 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .employees {
   background-color: #f2efe6;
   padding-block: 120px;
+
+  @include tablet {
+    padding-block: 60px;
+  }
 
   &__head {
     max-width: 760px;
@@ -13,7 +19,7 @@
   }
 
   &__description {
-    margin-bottom: 0;
+    margin-bottom: 40px;
     text-align: center;
   }
 }

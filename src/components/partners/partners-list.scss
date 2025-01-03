@@ -1,8 +1,15 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .partners-list {
   display: flex;
-  column-gap: 20px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   max-width: 896px;
+  gap: 20px;
   margin-inline: auto;
+
+  @include tablet {
+    justify-content: space-evenly;
+  }
 }

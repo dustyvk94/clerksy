@@ -1,15 +1,34 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .book {
   padding-block: 120px;
 
+  @include tablet-big {
+    padding-block: 60px;
+  }
+
   &__grid {
     display: grid;
-    column-gap: 40px;
     justify-content: space-between;
-    grid-template-columns: 394px 490px;
+    grid-template-columns: minmax(200px, 394px) minmax(260px, 490px);
+    gap: 40px;
+
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 
   &__row--content {
     align-self: center;
+
+    @include tablet-big {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -23,11 +42,21 @@
   &__image-box {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 488px;
     background-image: url("../images/decor/vector.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    padding-inline: 19%;
+
+    @include tablet {
+      height: 378px;
+    }
+
+    @include mobile {
+      justify-content: center;
+      height: auto;
+      padding-block: 30px;
+    }
   }
 }

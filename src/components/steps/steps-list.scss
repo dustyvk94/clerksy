@@ -1,29 +1,40 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .steps-list {
   display: grid;
-  column-gap: 130px;
   justify-content: center;
-  grid-template-columns: repeat(3, 262px);
+  grid-template-columns: repeat(3, minmax(200px, 290px));
   list-style: none;
+  gap: 11%;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
 
   &__item {
     position: relative;
+    padding: 40px 20px;
+    min-height: 183px;
     text-align: center;
 
-    &:nth-child(3)::before {
-      content: "";
-      position: absolute;
-      left: -12px;
-      top: -40px;
-      display: block;
-      width: 290px;
-      height: 183px;
+    @include tablet {
+      min-height: 120px;
+      padding-block: 20px;
+    }
+
+    &:nth-child(3) {
       background-image: url("../images/icons/stroke_icon.svg");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include tablet {
+        background-image: none;
+      }
     }
 
-    &::after {
+    &:not(:last-child)::after {
       content: "";
       position: absolute;
       right: -100px;
@@ -35,6 +46,23 @@
       background-size: contain;
       background-repeat: no-repeat;
       transform: translateY(-50%);
+
+      @include laptop {
+        right: -90px;
+      }
+
+      @include tablet-big {
+        right: -70px;
+        width: 55px;
+      }
+
+      @include tablet {
+        right: 50%;
+        top: initial;
+        bottom: -58px;
+        width: 75px;
+        transform: translateX(50%) rotate(90deg);
+      }
     }
 
     &:nth-child(1)::after {
@@ -48,5 +76,9 @@
 
   &__text {
     margin-bottom: 13px;
+
+    @include laptop {
+      font-size: 16px;
+    }
   }
 }

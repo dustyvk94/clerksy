@@ -1,42 +1,37 @@
 /* stylelint-disable media-feature-range-notation */
 
-// 1539 - 1180px
-@mixin desktop {
-  @media (max-width: 1539px) {
+@mixin laptop {
+  @media (max-width: 1199px) {
     @content;
   }
 }
 
-// 1179 - 900px
+@mixin tablet-big {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  @media (max-width: 1179px) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
-// 899 - 700px
-@mixin tablet-small {
-  @media (max-width: 899px) {
-    @content;
-  }
-}
-
-// 699 - 460px
 @mixin mobile {
-  @media (max-width: 699px) {
+  @media (max-width: 640px) {
     @content;
   }
 }
 
 @mixin mobile-medium {
-  @media (max-width: 620px) {
+  @media (max-width: 567px) {
     @content;
   }
 }
 
-// 459 - 375px
 @mixin mobile-small {
-  @media (max-width: 459px) {
+  @media (max-width: 475px) {
     @content;
   }
 }

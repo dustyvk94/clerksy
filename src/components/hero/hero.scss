@@ -1,19 +1,49 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .hero {
-  color: #fbfaf7;
+  color: var(--tc-light);
   background-image: url("../images/decor/hero_decor-bg.svg");
-  background-position: right center;
+  background-position-x: calc(50% + 310px);
+  background-position-y: bottom;
   background-size: 738px auto;
   background-repeat: no-repeat;
-  background-color: #163a24;
+  background-color: var(--bgc-secondary);
+
+  @include laptop {
+    background-position-x: calc(50% + 250px);
+  }
+
+  @include tablet-big {
+    background-size: 548px auto;
+  }
+
+  @include tablet {
+    background-position-x: center;
+    background-size: 458px auto;
+  }
 
   &__container {
     display: flex;
     align-items: center;
-    min-height: 580px;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__content {
     max-width: 476px;
+    padding-block: 154px;
+
+    @include tablet-big {
+      padding-block: 90px 124px;
+    }
+
+    @include tablet {
+      max-width: 500px;
+      text-align: center;
+      padding-block: 60px 364px;
+    }
   }
 
   &__title {
@@ -23,5 +53,13 @@
 
   &__description {
     margin-bottom: 0;
+
+    @include tablet-big {
+      max-width: 370px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 }

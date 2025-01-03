@@ -14,6 +14,10 @@
   color: var(--tc-primary);
   background-color: var(--bgc-primary);
 
+  @include tablet-small {
+    font-size: 14px;
+  }
+
   main {
     flex-grow: 1;
   }

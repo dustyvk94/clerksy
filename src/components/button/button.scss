@@ -4,22 +4,23 @@
   padding: 15px 25px;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1;
   text-decoration: none;
   background-color: transparent;
 
   &--primary {
-    color: #fbfaf7;
+    color: var(--tc-light);
     background-color: #198c36;
   }
 
   &--secondary {
-    color: #163a24;
+    color: var(--bgc-secondary);
     background-color: #fab5a0;
   }
 
   &--link {
     border-radius: 0;
     padding: 0;
-    color: #fbfaf7;
+    color: var(--tc-light);
   }
 }

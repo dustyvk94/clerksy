@@ -1,12 +1,22 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .advantages-list {
   display: grid;
-  column-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  @include tablet-big {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &__item {
     position: relative;
     padding-top: 188px;
     text-align: center;
+
+    @include tablet-small {
+      padding-top: 120px;
+    }
 
     &::before {
       content: "";
@@ -19,6 +29,10 @@
       background-position: center top;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include tablet-small {
+        height: 100px;
+      }
     }
 
     &--educates::before {

@@ -1,6 +1,12 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .steps {
-  background-color: #f2efe6;
+  background-color: var(--tc-light);
   padding-block: 120px;
+
+  @include laptop {
+    padding-block: 60px;
+  }
 
   &__title {
     margin-bottom: 26px;

@@ -1,10 +1,20 @@
+@use "../../scss/mixins/breakpoints" as *;
+
 .advantages {
-  color: #fbfaf7;
-  background-color: #163a24;
+  color: var(--tc-light);
+  background-color: var(--bgc-secondary);
   padding-block: 66px 120px;
+
+  @include tablet-small {
+    padding-block: 60px;
+  }
 
   &__title {
     margin-bottom: 72px;
     text-align: center;
+
+    @include tablet-small {
+      margin-bottom: 52px;
+    }
   }
 }

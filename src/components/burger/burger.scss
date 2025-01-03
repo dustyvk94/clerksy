@@ -1,0 +1,59 @@
+@use "../../scss/mixins/breakpoints" as *;
+
+.burger {
+  position: relative;
+  display: none; // По умолчанию скрыта на десктопе
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 20px;
+  background: none;
+
+  @include mobile {
+    display: block; // Показываем на мобильных устройствах
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-light); // Цвет линий можно изменить
+    transition: background-color 0.3s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-light); // Цвет линий можно изменить
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: -8px; // Расстояние до верхней линии
+    }
+
+    &::after {
+      bottom: -8px; // Расстояние до нижней линии
+    }
+  }
+
+  // Стили для активного состояния (когда меню открыто)
+  &.is-active {
+    .burger__line {
+      background-color: transparent; // Скрываем среднюю линию
+
+      &::before {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
