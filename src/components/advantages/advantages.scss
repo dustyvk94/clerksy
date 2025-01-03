@@ -5,7 +5,7 @@
   background-color: var(--bgc-secondary);
   padding-block: 66px 120px;
 
-  @include tablet-small {
+  @include mobile-small {
     padding-block: 60px;
   }
 
@@ -13,7 +13,7 @@
     margin-bottom: 72px;
     text-align: center;
 
-    @include tablet-small {
+    @include mobile-small {
       margin-bottom: 52px;
     }
   }

@@ -14,7 +14,7 @@
   color: var(--tc-primary);
   background-color: var(--bgc-primary);
 
-  @include tablet-small {
+  @include mobile-small {
     font-size: 14px;
   }
 
