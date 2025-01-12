@@ -1,0 +1,12 @@
+section.book
+  .container.container--narrow
+    .book__grid
+      .book__row.book__row--content
+        h2.heading.book__title Not just another HR resource
+        p.book__description Simple. Entertaining. Informative.
+        a.button.button--primary(href='#!') Download E-book
+      .book__row
+        picture.book__image-box
+          source(srcset="images/book.avif 1x, images/book@2x.avif 2x" type="image/avif")
+          source(srcset="images/book.webp 1x, images/book@2x.webp 2x" type="image/webp")
+          img(src="images/book.jpg" srcset="images/book@2x.jpg 2x" width="311" height="411" alt="Book" loading="lazy")

@@ -1,0 +1,50 @@
+@use "../../styles/helpers" as *;
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: rem(160);
+  padding: rem(15) rem(25);
+  font-weight: 400;
+  font-size: rem(16);
+  line-height: 1;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+
+  @include focus;
+
+  &--primary {
+    color: var(--tc-light);
+    background-color: var(--color-accent);
+
+    @include hover {
+      background-color: #15722c;
+    }
+  }
+
+  &--secondary {
+    color: var(--bgc-secondary);
+    background-color: #fab5a0;
+
+    @include hover {
+      background-color: #dd9681;
+    }
+  }
+
+  &--link {
+    position: relative;
+    border-radius: 0;
+    padding: 0;
+    color: var(--tc-light);
+    transition: color 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline-offset: rem(4);
+    }
+
+    @include hover {
+      color: #b4b4b4;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../styles/helpers" as *;
+
+.sublist {
+  @extend %list-reset;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15);
+
+  &__item {
+    display: flex;
+    column-gap: rem(11);
+    align-items: center;
+    font-size: rem(16);
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: rem(8);
+    height: rem(8);
+    background-color: var(--bgc-secondary);
+  }
+
+  &__item p {
+    margin-bottom: 0;
+
+    @include tablet-big {
+      font-size: rem(14);
+    }
+
+    @include tablet {
+      font-size: rem(16);
+    }
+  }
+}

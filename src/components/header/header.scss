@@ -1,0 +1,30 @@
+@use "../../styles/helpers" as *;
+
+.header {
+  color: var(--tc-light);
+  background-color: var(--bgc-secondary);
+  padding-block: rem(20);
+
+  &__container,
+  &__user-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+
+  &__user-actions {
+    column-gap: rem(24);
+
+    @include mobile {
+      justify-content: space-evenly;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../styles/helpers" as *;
+
+.started {
+  color: var(--tc-light);
+  background-image: url("../images/decor/started/frame-left.svg"),
+    url("../images/decor/started/frame-right.svg");
+  background-position: left bottom, right bottom;
+  background-size: rem(300) rem(400);
+  background-repeat: no-repeat;
+  background-color: var(--bgc-secondary);
+  padding-block: rem(120);
+
+  @include tablet {
+    background-size: rem(190) rem(250);
+    padding-block: rem(60);
+  }
+
+  @include mobile {
+    background-image: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: rem(26);
+  }
+
+  &__description {
+    margin-bottom: rem(18);
+  }
+}

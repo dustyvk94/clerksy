@@ -1,0 +1,86 @@
+@use "../../styles/helpers" as *;
+
+.footer {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--top {
+      padding-block: rem(40);
+
+      @include tablet-big {
+        padding-block: rem(20);
+      }
+    }
+
+    &--bottom {
+      border-top: rem(1) solid var(--tc-light);
+      padding-block: rem(25) rem(26);
+
+      @include tablet-big {
+        flex-direction: column-reverse;
+        gap: rem(10);
+      }
+    }
+  }
+
+  &__logo,
+  &__social {
+    flex-basis: 20%;
+  }
+
+  &__logo {
+    display: flex;
+
+    @include mobile {
+      flex-basis: 30%;
+    }
+  }
+
+  &__caption {
+    flex-basis: 60%;
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: rem(24);
+    text-align: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: end;
+
+    @include mobile {
+      flex-basis: 60%;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 0;
+    font-size: rem(14);
+
+    @include tablet-big {
+      text-align: center;
+    }
+  }
+
+  &__links-list {
+    @extend %list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(14);
+  }
+
+  &__links-link {
+    @include tablet-big {
+      font-size: rem(16);
+    }
+  }
+}

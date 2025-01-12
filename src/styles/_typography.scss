@@ -1,0 +1,23 @@
+@use "./helpers" as *;
+
+.heading {
+  @include fluid-text(48, 38);
+
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  line-height: 1.12;
+
+  &--medium {
+    @include fluid-text(28, 22);
+  }
+}
+
+.link {
+  outline: none;
+  font-size: rem(14);
+  text-decoration: none;
+  color: var(--color-accent);
+
+  @include focus;
+}

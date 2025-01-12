@@ -1,0 +1,36 @@
+@use "../../styles/helpers" as *;
+
+.social {
+  @extend %list-reset;
+
+  display: flex;
+  column-gap: rem(14);
+  align-items: center;
+  outline: none;
+
+  &__item {
+    flex: 1 0 auto;
+    width: rem(30);
+    height: rem(30);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include focus;
+
+    @include hover {
+      .social__icon {
+        fill: #15722c;
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--color-accent);
+    transition: fill 0.3s ease-in-out;
+  }
+}

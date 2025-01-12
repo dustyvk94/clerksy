@@ -1,0 +1,4 @@
+@use "./helpers/mixins";
+
+@include mixins.fontsWoff2("NotoSans", "NotoSans-Regular", 400);
+@include mixins.fontsWoff2("Recoleta", "Recoleta-SemiBold", 600);

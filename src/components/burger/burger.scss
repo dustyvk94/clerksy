@@ -1,0 +1,58 @@
+@use "../../styles/helpers" as *;
+
+.burger {
+  position: relative;
+  display: none;
+  border: none;
+  padding: 0;
+  width: rem(30);
+  height: rem(20);
+  background: none;
+
+  @include mobile {
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: rem(2);
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: rem(2);
+      background-color: var(--color-light);
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: rem(-8);
+    }
+
+    &::after {
+      bottom: rem(-8);
+    }
+  }
+
+  &.is-active {
+    .burger__line {
+      background-color: transparent;
+
+      &::before {
+        transform: translateY(rem(8)) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(rem(-8)) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../styles/helpers" as *;
+
+.scenes {
+  padding-block: rem(60);
+
+  @include mobile {
+    padding-block: rem(40);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: rem(424);
+    background-image: url("../images/decor/scenes_decor-bg.svg");
+    background-position: right rem(15) center;
+    background-size: rem(492) auto;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      min-height: auto;
+      background-image: none;
+    }
+  }
+
+  &__content {
+    max-width: rem(394);
+
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(27);
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

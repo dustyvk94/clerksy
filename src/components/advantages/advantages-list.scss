@@ -1,0 +1,60 @@
+@use "../../styles/helpers" as *;
+
+.advantages-list {
+  @extend %list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: rem(40);
+
+  @include tablet-big {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    position: relative;
+    padding-top: rem(188);
+    text-align: center;
+
+    @include mobile-small {
+      padding-top: rem(120);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: rem(160);
+      background-position: center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include mobile-small {
+        height: rem(100);
+      }
+    }
+
+    &--educates::before {
+      background-image: url("../images/advantages/educates.svg");
+    }
+
+    &--protects::before {
+      background-image: url("../images/advantages/protects.svg");
+    }
+
+    &--manages::before {
+      background-image: url("../images/advantages/manages.svg");
+    }
+
+    &--create::before {
+      background-image: url("../images/advantages/create.svg");
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

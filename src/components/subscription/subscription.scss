@@ -1,0 +1,56 @@
+@use "../../styles/helpers" as *;
+
+.subscription {
+  background-color: var(--tc-light);
+  padding-block: rem(54) rem(72);
+
+  @include tablet-big {
+    padding-block: rem(40);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(40);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    flex: 1 0 rem(350);
+
+    @include tablet {
+      flex: auto;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(26);
+
+    @include tablet-big {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+
+  &__form {
+    flex: 0 1 rem(590);
+
+    @include tablet {
+      flex: auto;
+      max-width: rem(500);
+    }
+  }
+
+  &__form-text {
+    margin: rem(12) 0 0;
+    font-size: rem(14);
+  }
+}

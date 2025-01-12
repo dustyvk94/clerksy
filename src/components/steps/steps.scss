@@ -1,0 +1,29 @@
+@use "../../styles/helpers" as *;
+
+.steps {
+  background-color: var(--tc-light);
+  padding-block: rem(120);
+
+  @include laptop {
+    padding-block: rem(60);
+  }
+
+  &__title {
+    margin-bottom: rem(26);
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: rem(40);
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: rem(40);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}

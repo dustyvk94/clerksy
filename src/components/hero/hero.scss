@@ -1,0 +1,65 @@
+@use "../../styles/helpers" as *;
+
+.hero {
+  color: var(--tc-light);
+  background-image: url("../images/decor/hero_decor-bg.svg");
+  background-position-x: calc(50% + rem(310));
+  background-position-y: bottom;
+  background-size: rem(738) auto;
+  background-repeat: no-repeat;
+  background-color: var(--bgc-secondary);
+
+  @include laptop {
+    background-position-x: calc(50% + rem(250));
+  }
+
+  @include tablet-big {
+    background-size: rem(548) auto;
+  }
+
+  @include tablet {
+    background-position-x: center;
+    background-size: rem(458) auto;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: rem(476);
+    padding-block: rem(154);
+
+    @include tablet-big {
+      padding-block: rem(90) rem(124);
+    }
+
+    @include tablet {
+      max-width: rem(500);
+      text-align: center;
+      padding-block: rem(60) rem(364);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(18);
+    line-height: 1.36;
+  }
+
+  &__description {
+    margin-bottom: 0;
+
+    @include tablet-big {
+      max-width: rem(370);
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../styles/helpers" as *;
+
+.partners-list {
+  @extend %list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: rem(896);
+  gap: rem(20);
+  margin-inline: auto;
+
+  @include tablet {
+    justify-content: space-evenly;
+  }
+}

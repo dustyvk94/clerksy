@@ -1,0 +1,68 @@
+@use "../../styles/helpers" as *;
+
+.feature {
+  padding-block: rem(120) rem(20);
+
+  @include tablet {
+    padding-block: rem(60);
+  }
+
+  @include mobile {
+    padding-bottom: rem(30);
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      gap: rem(40);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+
+    @include mobile {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    flex-shrink: 1;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex-shrink: 0;
+    max-width: rem(394);
+
+    @include mobile {
+      flex-shrink: 1;
+      max-width: rem(500);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(27);
+
+    @include mobile {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

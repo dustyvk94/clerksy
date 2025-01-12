@@ -1,0 +1,29 @@
+include ../logo/logo
+
+footer.footer
+  .container
+    .footer__grid
+      .footer__row.footer__row--top
+        .footer__logo
+          +logo("dark", "small")
+
+        p.footer__caption A people company.
+
+        .footer__social
+          include ../social/social
+
+      .footer__row.footer__row--bottom
+        p.footer__copy
+          | &copy; 2020 Clerksy, Inc. Clerksy is a registered trademark of Clerksy, Inc.
+
+        ul.footer__links-list
+          li.footer__links-item
+            a.footer__links-link.link(href='#!') Privacy Policy
+          li.footer__links-item
+            a.footer__links-link.link(href='#!') Terms of Service
+          li.footer__links-item
+            a.footer__links-link.link(href='#!') GDPR
+          li.footer__links-item
+            a.footer__links-link.link(href='#!') Careers
+          li.footer__links-item
+            a.footer__links-link.link(href='#!') Press Kit

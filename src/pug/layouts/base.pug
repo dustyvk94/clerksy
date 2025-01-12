@@ -1,0 +1,42 @@
+include ../mixins
+
+block variables
+  - var pageTitle;
+  - var pageDescription;
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title= pageTitle
+    meta(name="description" content= pageDescription)
+
+    //- Favicon
+    +favicon
+
+    link(rel='preload' fetchpriority='high' as='image' href='images/decor/hero_decor-bg.svg' type='image/svg+xml')
+
+    //- Fonts proload
+    +fontPreload("NotoSans", "NotoSans-Regular")
+    +fontPreload("Recoleta", "Recoleta-SemiBold")
+
+    //- Vendors library
+
+    block styles
+      link(rel="stylesheet" href="css/index.css")
+
+    block scripts
+      //- script(src="js/index.bundle.js" defer)
+
+  body.page
+    //- Header
+    include ../../components/header/header
+
+    //- Main content
+    main.main
+      block content
+
+    //- Footer
+    include ../../components/footer/footer

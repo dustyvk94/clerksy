@@ -1,0 +1,74 @@
+@use "../../styles/helpers" as *;
+
+.interest-list {
+  @extend %list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(40);
+
+  @include tablet-big {
+    gap: rem(20);
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: rem(40);
+  }
+
+  &__item {
+    position: relative;
+    align-self: start;
+    border-radius: rem(15);
+    padding: rem(145) rem(40) rem(66);
+    box-shadow: rem(5) rem(5) rem(20) 0 #e9e4d5;
+    background-color: #fbfaf7;
+
+    @include tablet-big {
+      padding: rem(105) rem(20) rem(30);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: rem(40);
+      top: rem(50);
+      width: rem(84);
+      height: rem(75);
+      background-position: left center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include tablet-big {
+        left: rem(20);
+        top: rem(20);
+        width: rem(74);
+        height: rem(65);
+      }
+    }
+
+    &--protect::before {
+      background-image: url("../images/icons/protect.svg");
+    }
+
+    &--employees::before {
+      background-image: url("../images/icons/star.svg");
+    }
+
+    &--know::before {
+      background-image: url("../images/icons/search.svg");
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(23);
+
+    @include tablet-big {
+      margin-bottom: rem(20);
+    }
+
+    @include mobile {
+      font-size: rem(30);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../styles/helpers" as *;
+
+.logo {
+  display: block;
+  outline: none;
+  color: #133a23;
+
+  @include focus;
+
+  &--light {
+    color: var(--tc-light);
+  }
+}
